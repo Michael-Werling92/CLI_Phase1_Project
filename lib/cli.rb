@@ -9,6 +9,7 @@ class CLI
         #call the list type method
         list_type
         menu
+        continue_again
     end
 
     def continue
@@ -52,7 +53,12 @@ class CLI
         puts
         puts "#{type.ineffective.capitalize} type pokemon are immune to this Pokemon's type attacks. (0 damage to)"
     end
-    
-end
+
+    def continue_again
+        puts
+        puts "Press Enter to view details on anothere Pokemon Type."
+        gets
+        menu
+    end
 
 end
