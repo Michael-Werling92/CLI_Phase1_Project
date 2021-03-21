@@ -41,23 +41,24 @@ class CLI
         API.display_pokemon_details(type)
         puts "Here are the battle details for #{type.name.capitalize} Pokemon:"
         puts
-        puts "Weak against #{type.weakness} attacks. (x2 damage from)"
+        puts "Super Effective against #{type.strength.green} Pokemon. (x2 damage to)"
         puts
-        puts "Super Effective against #{type.strength} Pokemon. (x2 damage to)"
+        puts "Weak against #{type.weakness.red} attacks. (x2 damage from)"
         puts
-        puts "Resistant to #{type.resistance} attacks. (x0.5 damage from)"
+        puts "Resistant to #{type.resistance.green} attacks. (x0.5 damage from)"
         puts
-        puts "#{type.acceptance.capitalize} type pokemon are resistant to this Pokemon's type attacks. (x0.5 damage to)"
+        puts "#{type.acceptance.capitalize.red} type pokemon are resistant to this Pokemon type's attacks. (x0.5 damage to)"
         puts
-        puts "This Pokemon type is immune to #{type.immunity} attacks. (0 damage from)"
+        puts "This Pokemon type is immune to #{type.immunity.green} attacks. (0 damage from)"
         puts
-        puts "#{type.ineffective.capitalize} type pokemon are immune to this Pokemon's type attacks. (0 damage to)"
+        puts "#{type.ineffective.capitalize.red} type pokemon are immune to this Pokemon type's attacks. (0 damage to)"
     end
 
     def continue_again
         puts
-        puts "Press Enter to view details on anothere Pokemon Type."
+        puts "Press Enter to view details on another Pokemon Type."
         gets
+        list_type
         menu
     end
 
