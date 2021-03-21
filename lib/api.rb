@@ -15,7 +15,18 @@ class API
         resp= RestClient.get(type.url)
         type_array = JSON.parse(resp.body, symbolize_names: true)
         type_stats = type_array[:damage_relations]
-        binding.pry
+
+        type_weakness=type_stats[:double_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        
+        type_strength=type_stats[:double_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+
+        type_resistance=type_stats[:half_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+
+        type_acceptance=type_stats[:half_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+
+        type_immunity=type_stats[:no_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+
+        type_ineffectve=type_stats[:double_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
     end
 
 end
