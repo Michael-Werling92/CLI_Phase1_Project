@@ -46,23 +46,23 @@ class API
             type.resistance = type_resistance
         end
 
-        if type_.length == 0
-            type.weakness = "NO"
+        if type_acceptance.length == 0
+            type. = "NO"
         else
-            type.weakness = type_weakness
+            type.acceptance = type_acceptance
         end
 
-        if type_weakness.length == 0
-            type.weakness = "NO"
+        if type_.immunity.length == 0
+            type.immunity = "NO"
         else
-            type.weakness = type_weakness
+            type.immunity = type_immunity
         end
 
         if type_ineffective.length == 0
             type.ineffective = "NO"
         else
             type.ineffective = type_ineffective
-
+        end
     end
 
 end
