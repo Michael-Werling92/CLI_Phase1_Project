@@ -32,7 +32,7 @@ class CLI
             menu
         else
             pokemon = Type.all[input.to_i-1]
-            display_pokemon_details(pokemon)
+            API.display_pokemon_details(pokemon)
         end
     end
 
