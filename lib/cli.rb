@@ -70,7 +70,7 @@ class CLI
 
     def continue_again
         puts
-        puts "Press Enter to view details on another Pokemon Type."
+        puts "Press Enter to view details on another Pokemon Type or press "Esc" to leave teh program."
         gets
         list_type
         menu
