@@ -6,7 +6,6 @@ class API
         resp = RestClient.get('https://pokeapi.co/api/v2/type')
         type_hash = JSON.parse(resp.body, symbolize_names: true)
         type_array = type_hash[:results]
-        binding.pry
         type_array.map do | type |
             Type.new(type)
         end

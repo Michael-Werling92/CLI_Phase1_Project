@@ -17,7 +17,7 @@ class CLI
     end
 
     def list_type
-        #call the Type level from API and loop through to get all types
+        # Call our Type level all variable and loop through it to list the Types
         Type.all.each.with_index(1) do | type, i |
             puts "#{i}. #{type.name}"
         end

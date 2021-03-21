@@ -4,8 +4,8 @@ class Type
     @@all = []
 
     def initialize(type)
-        @name = name
-        @url = url
+        @name = type[:name]
+        @url = type[:url]
         @@all << self
     end
 
