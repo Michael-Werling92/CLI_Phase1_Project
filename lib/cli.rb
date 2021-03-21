@@ -10,3 +10,4 @@ class CLI
         print "Press any key to continue\r"
         gets
     end
+end
