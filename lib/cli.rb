@@ -32,8 +32,27 @@ class CLI
             menu
         else
             pokemon = Type.all[input.to_i-1]
-            API.display_pokemon_details(pokemon)
+            display_pokemon_details(pokemon)
         end
     end
+
+    def display_pokemon_details(type)
+        API.display_pokemon_details(type)
+        puts "Here are the battle details for #{type.name.capitalize} Pokemon:"
+        puts
+        puts "Weak against #{type.weakness} attacks. (x2 damage from)"
+        puts
+        puts "Super Effective against #{type.strength} Pokemon. (x2 damage to)"
+        puts
+        puts "Resistant to #{type.resistance} attacks. (x0.5 damage from)"
+        puts
+        puts "#{type.acceptance.capitalize} type pokemon are resistant to this Pokemon's type attacks. (x0.5 damage to)"
+        puts
+        puts "This Pokemon type is immune to #{type.immunity} attacks. (0 damage from)"
+        puts
+        puts "#{type.ineffective.capitalize} type pokemon are immune to this Pokemon's type attacks. (0 damage to)"
+    end
+    
+end
 
 end
