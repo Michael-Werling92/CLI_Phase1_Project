@@ -2,6 +2,20 @@ class CLI
 
     def run
         puts "Welcome to the Pokemon Type Battle Stats Tracker"
+        puts"                                   ,' |                              "
+        puts"     _.----.        ____         ,'  _|   ___     ___     ____        "
+        puts"  ,-'       `.     |    |  /`.   |,-'    |   \   /   |   |    \   | `." 
+        puts" |      __    |    '-.  | /   `.  ___    |    \ /    |   '-.   \  |  |"
+        puts"  |.    | |   |  __  |  |/    ,','_  `.  |           | __  |    \ |  |"
+        puts"    |   |_|   /,' _`.|      ,' / / / /   |           ,'  `.|      |  |"
+        puts"     |     ,-'/  / | |    ,'   | |  / ,`.|             / \ |  |      |"
+        puts"      |    | |   |_/ |   `-.   |   `'  /|   |     ||    _/ |  |      |"
+        puts"       |    | \      /       `-.`.___,-' |  |\   /|  |     |  | |    |"
+        puts"        |    | `.__,'|  |`-._    `|      |__| \ / |   `.__,|  | |    |"
+        puts"         |_.-'       |__|    `-._ |               '-.|     '-.| |    |"
+        puts"                                 `'                             '-.__|"
+        
+        
         #allow the audience to take in the title screen
         continue
         #call the load type method
