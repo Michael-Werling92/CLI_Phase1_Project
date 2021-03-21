@@ -2,11 +2,11 @@ class CLI
 
     def run
         puts "Welcome to the Pokemon Type Battle Stats Tracker"
-        puts"                                   ,' |                                  "
-        puts"     _.----.        ____         ,'  _|   ___    ___       ____      __  "
-        puts"  ,-'       `.     |    |  /`.   |,-'    |      /   |     |    '-   |  `." 
+        puts"                                   ,' |                                   "
+        puts"     _.----.        ____         ,'  _|   ___    ___       ____      __   "
+        puts"  ,-'       `.     |    |  /`.   |,-'    |      /   |     |    '-   |  `. " 
         puts" |      __    |    '-.  | /   `.  ___    |     /    |     '-.    |  |    |"
-        puts"  |.    | |   |  __  |  |/    ,','_  `.  |          | __    |    |__|    |"
+        puts"  |.    | |   |  __  |  |/    ,','_  `.  |          | __    |    |_-'    |"
         puts"    |   |_|   /,' _`.|      ,' / / / /   |           ,'  `. |            |"
         puts"     |     ,-'/  / | |    ,'   | |  / ,`.|             /'.  |            |"
         puts"      |    | |   |_/ |   `-.   |   `'  / |   |     ||  '._/ |            |"
@@ -74,6 +74,7 @@ class CLI
         gets
         list_type
         menu
+        continue_again
     end
 
 end
