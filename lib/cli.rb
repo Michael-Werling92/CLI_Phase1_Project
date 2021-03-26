@@ -42,7 +42,10 @@ class CLI
         puts "Please select a number from above to see the corresponding battle stats for each Pokemon type."
         input = gets.chomp
         # make sure the users input is good
-        if !input.to_i.between?(1, Type.all.count)
+        if Type.find_by_type(input) != nil
+            pokemon = Type.find_by_type(input)
+            display_pokemon_details(pokemon)
+        elsif !input.to_i.between?(1, Type.all.count)
             list_type
             menu
         else

@@ -26,7 +26,7 @@ class API
 
         type_immunity=type_stats[:no_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
 
-        type_ineffective=type_stats[:double_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_ineffective=type_stats[:no_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
 
         if type_weakness.length == 0
             type.weakness = "NO"

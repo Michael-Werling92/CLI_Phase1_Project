@@ -9,6 +9,11 @@ class Type
         @@all << self
     end
 
+    def self.find_by_type(type_name)
+        self.all.find {|type_info| type_info.name == type_name}
+    end
+
+
     def self.all
         @@all
     end
