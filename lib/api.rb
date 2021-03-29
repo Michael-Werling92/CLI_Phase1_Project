@@ -16,17 +16,17 @@ class API
         type_array = JSON.parse(resp.body, symbolize_names: true)
         type_stats = type_array[:damage_relations]
 
-        type_weakness=type_stats[:double_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_weakness=type_stats[:double_damage_from].map { |h| h[:name]}.join(', ')
 
-        type_strength=type_stats[:double_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_strength=type_stats[:double_damage_to].map { |h| h[:name]}.join(', ')
 
-        type_resistance=type_stats[:half_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_resistance=type_stats[:half_damage_from].map { |h| h[:name]}.join(', ')
 
-        type_acceptance=type_stats[:half_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_acceptance=type_stats[:half_damage_to].map { |h| h[:name]}.join(', ')
 
-        type_immunity=type_stats[:no_damage_from].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_immunity=type_stats[:no_damage_from].map { |h| h[:name]}.join(', ')
 
-        type_ineffective=type_stats[:no_damage_to].map { |h| [h[:name], h[:url]] }.to_h.keys.join(', ')
+        type_ineffective=type_stats[:no_damage_to].map { |h| h[:name]}.join(', ')
 
         if type_weakness.length == 0
             type.weakness = "NO"

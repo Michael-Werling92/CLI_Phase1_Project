@@ -41,10 +41,10 @@ class CLI
     def menu
         puts "Please select a number from above or type in selection to see the corresponding battle stats for a certain Pokemon type."
         input = gets.chomp
-        user_input = Type.find_by_type(input)
+        typed_input = Type.find_by_type(input)
         # make sure the users input is good
-        if user_input != nil
-            display_pokemon_details(user_input)
+        if typed_input != nil
+            display_pokemon_details(typed_input)
         elsif input.to_i.between?(1, Type.all.count)
             pokemon = Type.all[input.to_i-1]
             display_pokemon_details(pokemon)
@@ -73,7 +73,7 @@ class CLI
 
     def continue_again
         puts
-        puts "Press any key to view details on another Pokemon type or type EXIT to quit."
+        puts "Press Enter to view details on another Pokemon type or type EXIT to quit."
         input=gets.chomp
         if input.downcase != "exit"
             list_type
