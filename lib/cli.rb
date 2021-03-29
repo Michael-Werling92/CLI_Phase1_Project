@@ -41,9 +41,10 @@ class CLI
     def menu
         puts "Please select a number from above or type in selection to see the corresponding battle stats for a certain Pokemon type."
         input = gets.chomp
+        user_input = Type.find_by_type(input)
         # make sure the users input is good
-        if Type.find_by_type(input) != nil
-            display_pokemon_details(Type.find_by_type(input))
+        if user_input != nil
+            display_pokemon_details(user_input)
         elsif input.to_i.between?(1, Type.all.count)
             pokemon = Type.all[input.to_i-1]
             display_pokemon_details(pokemon)
