@@ -73,11 +73,15 @@ class CLI
 
     def continue_again
         puts
-        puts "Press Enter to view details on another Pokemon Type."
-        gets
-        list_type
-        menu
-        continue_again
+        puts "Press any key to view details on another Pokemon type or type EXIT to quit."
+        input=gets.chomp
+        if input.downcase != "exit"
+            list_type
+            menu
+            continue_again
+        else
+            exit
+        end
     end
 
 end
